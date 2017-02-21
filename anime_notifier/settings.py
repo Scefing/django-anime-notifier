@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'easy_thumbnails',
     'filer',
     'mptt',
+    'json2sql',
 ]
 
 MIDDLEWARE = [
