@@ -3,6 +3,8 @@ import jsonfield
 
 
 from django.db import models
+from django.db.models.functions import Concat
+
 from filer.fields.file import FilerFileField
 
 # Create your models here.
@@ -14,10 +16,12 @@ class Json(models.Model):
                ("Su", "Summer"),
                ("F","Fall"),
                ("W", "Winter"))
-    year = models.IntegerField()
+    year = models.CharField(max_length=4)
     season = models.CharField(max_length=2, choices=SEASONS)
     json_file = FilerFileField(null=True, blank=True)
-    json_encode = jsonfield.JSONField(json_file)
+
+    def __str__(self):
+        return self.season + " " + self.year
 
 class Show(models.Model):
     name = models.CharField(max_length=500)

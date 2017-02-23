@@ -28,13 +28,17 @@ Temporary Items
 .apdisk
 
 .DS_Store
-.gitignore
-.idea/vcs.xml
-.idea/workspace.xml
+.idea
 anime_notifier/__pycache__/
 json2sql/.DS_Store
 json2sql/__pycache__/
 json2sql/migrations/0001_initial.py
 json2sql/migrations/__pycache__/
-season.
+season.json
 secret.txt
+db.sqlite3
+.gitignore
+anime_notifier/templates/
+filer_public/
+json2sql/migrations/0002_remove_json_json_encode.py
+json2sql/migrations/0003_auto_20170223_2108.py

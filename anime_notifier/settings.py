@@ -55,7 +55,7 @@ INSTALLED_APPS = [
     'easy_thumbnails',
     'filer',
     'mptt',
-    'json2sql',
+    'json2sql.apps.Json2SqlConfig',
 ]
 
 MIDDLEWARE = [
@@ -73,7 +73,7 @@ ROOT_URLCONF = 'anime_notifier.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'DIRS': [os.path.join(BASE_DIR, 'templates'),os.path.join(BASE_DIR, 'anime_notifier/templates').replace ('\\','/'),],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

@@ -34,7 +34,10 @@ class CustomAdminSite(AdminSite):
             request.current_app = self.name
             return render(request, 'json2sql/sometemplate.html', {'form': form})
 
-admin_site = CustomAdminSite()
+#admin_site = CustomAdminSite()
 
-admin_site.register(Json)
-admin_site.register(Show)
+#admin_site.register(Json)
+#admin_site.register(Show)
+
+admin.site.register(Show)
+admin.site.register(Json)
