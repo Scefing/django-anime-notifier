@@ -16,7 +16,7 @@ class CustomAdminSite(AdminSite):
     def get_urls(self):
         urls = super(CustomAdminSite, self).get_urls()
         my_urls = [
-            url(r'^json_upload/$', self.json_upload_view),
+            url(r'^json_upload/$', self.admin_view(self.json_upload_view)),
         ]
         return my_urls + urls
 
@@ -31,6 +31,10 @@ class CustomAdminSite(AdminSite):
         else:
             form = JsonUploadForm()
 
+            request.current_app = self.name
             return render(request, 'json2sql/sometemplate.html', {'form': form})
 
 admin_site = CustomAdminSite()
+
+admin_site.register(Json)
+admin_site.register(Show)
