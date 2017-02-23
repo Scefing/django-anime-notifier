@@ -37,7 +37,6 @@ json2sql/migrations/__pycache__/
 season.json
 secret.txt
 db.sqlite3
-.gitignore
 anime_notifier/templates/
 filer_public/
 json2sql/migrations/0002_remove_json_json_encode.py
